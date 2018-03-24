@@ -1,0 +1,57 @@
+@import '../../../assets/styles/common/_variables.scss';
+
+:host {
+    width: 100%;
+    display: block;
+}
+
+.search-field {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+
+.films {
+    &__nothing {
+        font-size: $font-size-lg;
+        text-align: center;
+    }
+}
+
+.film {
+    margin:0 0 $offset-lg;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    transition: all $animation-fast;
+    &:hover {
+        transform: translate(0, -8px);
+    }
+    &__poster {
+        background-color: $smoke-color;
+        cursor: pointer;
+        &-img {
+            width: 300px;
+            height: 444px;
+            display: block;
+        }
+    }
+    &__body {
+        width: 100%;
+        margin-left: $offset-xl;
+        padding: $offset-md;
+        position: relative;
+    }
+    &__favorite {
+        position: absolute;
+        top: $offset-md;
+        right: $offset-md;
+        font-size: $offset-xl;
+        cursor: pointer;
+        opacity: .2;
+        &--active {
+            opacity: 1;
+            color: $red-color;
+        }
+    }
+}

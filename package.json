@@ -1,15 +1,16 @@
 {
   "name": "films-list-crudangular",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve omdb-web.localhosts.io --disable-host-check true --hmr true",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
-  },"repository": {
+  },
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/Fedorrychkov/-CRUD-with-Angular-FIlms-List.git"
   },
@@ -20,12 +21,15 @@
   "homepage": "https://github.com/Fedorrychkov/-CRUD-with-Angular-FIlms-List#readme",
   "private": true,
   "dependencies": {
+    "@angular-devkit/core": "^0.4.6",
     "@angular/animations": "^5.0.0",
+    "@angular/cdk": "^5.2.4",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
+    "@angular/material": "^5.2.4",
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",

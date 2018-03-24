@@ -1,0 +1,88 @@
+$red-color:                 #b65149;
+$violet-color:              #9560b4;
+$blue-color:                #52b4e1;
+$sea-color:                 #57d0c9;
+$button-start:              #4EC5FF;
+$green-color:               #6fca89;
+$olive-color:               #a2c752;
+$yellow-color:              #f0b73d;
+$orange-color:              #f0783d;
+$topbar-color:              #f5686e;
+
+$red-color:                 #b12929;
+$red-color-light:           #db3232;
+
+$darkest-color:             #2e363e;
+$darker-color:              #4a5159;
+$dark-color:                #6b7784;
+$gray-color:                #8f9ba9;
+$light-color:               #bac4cf;
+$lighter-color:             #d3dbe3;
+$lightest-color:            #e4ebf3;
+$smoke-color:               #f3f7fc;
+$grayer-color:              #f2f2f2;
+$ligher-color:              #c4c4c4;
+$navbar-color:              #ebebeb;
+$content-color:             #fcfcfc;
+
+$white-color:               #ffffff;
+
+$success-color:             #75C9BF;
+
+$call-screen:               #b5b5b5;
+
+$purple-color:              #7582C9;
+
+$black-color:               #000000;
+$black-color-light:         #494949;
+$black-color-alpha-half:    rgba(0, 0, 0, .4);
+
+$seafoam-color:             #93B38C;
+
+$rosy-color-pink:           #F4686E;
+$rosy-color-ligh:           #FFC2C3;
+
+$offset-base:               5px;
+$offset-mc:                 $offset-base;
+$offset-xs:                 $offset-base * 1.5;
+$offset-sm:                 $offset-base * 2;
+$offset-md:                 $offset-base * 3;
+$offset-lg:                 $offset-base * 4;
+$offset-xl:                 $offset-base * 5;
+$offset-xl-sm:              $offset-base * 6;
+$offset-xl-md:              $offset-base * 7;
+
+$gap-mc:                    $offset-base * 8;
+$gap-xs:                    $offset-base * 10;
+$gap-sm:                    $offset-base * 12;
+$gap-md:                    $offset-base * 14;
+$gap-lg:                    $offset-base * 16;
+$gap-xl:                    $offset-base * 18;
+
+$font-size-base:            16px;
+$font-size:                 1rem;
+$font-size-mc:              $font-size * .65;
+$font-size-xs:              $font-size;
+$font-size-sm:              $font-size * 1.25;
+$font-size-md:              $font-size * 1.5; // 24px
+$font-size-lg:              $font-size * 2.25;
+$font-size-xl:              $font-size * 2.75;
+$font-size-xl-sm:           $font-size * 3;
+$font-size-xxl:             $font-size * 3.25;
+
+$screen-sm:                 320px;
+$screen-md:                 720px;
+$screen-lg:                 1024px;
+$screen-xl:                 1440px;
+$screen-xl-md:              1560px;
+
+$account-avatar:            82px;
+
+$topbar-account-width:      200px;
+
+$navbar-width:              350px;
+$navbar-offset:             ($account-avatar - $offset-sm);
+
+$animation-fast:            .15s;
+$animation-normal:          .30s;
+$animation-slow:            .45s;

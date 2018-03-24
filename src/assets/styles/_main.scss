@@ -1,0 +1,22 @@
+@import './common/variables';
+@import './common/_reset.scss';
+
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+.content {
+    padding: $offset-md;
+    overflow: auto;
+    &-sides {
+        padding: 0 $offset-md;
+    }
+}
+
+.main {
+    width: 70%;
+    margin: $offset-xl auto;
+    & mat-progress-spinner {
+        margin: $offset-md auto;
+    }
+}
