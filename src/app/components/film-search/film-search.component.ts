@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators} from '@angular/forms';
 import { SearchFilmService } from '../../services/search-film.service';
 import { map } from 'rxjs/operators/map';
 import { IFilmShort } from '../../interfaces/IFilmShort';
+import { FavoriteService } from './../../services/favorite.service';
 
 @Component({
   selector: 'app-film-search',
@@ -14,12 +15,12 @@ export class FilmSearchComponent implements OnInit {
   public filmTitle: FormControl = new FormControl();
   public filmTitlesList: String[] = [];
   public filmsList: IFilmShort[];
-  public favoriteList: IFilmShort[];
   public isLoading = true;
 
   constructor(
     public fb: FormBuilder,
-    public searchFilmsService: SearchFilmService
+    public searchFilmsService: SearchFilmService,
+    public favoriteService: FavoriteService
   ) { }
 
   getTitlesForAutoComplete() {
@@ -56,30 +57,11 @@ export class FilmSearchComponent implements OnInit {
   }
 
   addToFavorite(film: IFilmShort) {
-    const favoriteList: IFilmShort[] = localStorage.favorite ? JSON.parse(localStorage.favorite) : [];
-    let list: IFilmShort[];
-    list = favoriteList.filter(item => item.imdbID !== film.imdbID );
-    if (!this.favoriteCheck(film)) {
-      list.push(film);
-    }
-    this.favoriteList = list;
-    localStorage.favorite = JSON.stringify(this.favoriteList);
+    this.favoriteService.addToFavorite(film);
   }
   favoriteCheck(film: IFilmShort) {
-    const favoriteList: IFilmShort[] = localStorage.favorite ? JSON.parse(localStorage.favorite) : [];
-    let isFavorite = false;
-    favoriteList.forEach(item => {
-      if (item.imdbID === film.imdbID) {
-        isFavorite = true;
-      }
-    });
-    return isFavorite;
+    return this.favoriteService.checkFavorite(film);
   }
-
-  // filter(val: IFilmShort): IFilmShort[] {
-  //   return this.favoriteList.filter(item =>
-  //     console.log(item));
-  // }
 
   ngOnInit() {
     this.SearchForm = this.fb.group({

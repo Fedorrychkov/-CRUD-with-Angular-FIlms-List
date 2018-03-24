@@ -18,6 +18,7 @@ import { FilmSearchComponent } from './components/film-search/film-search.compon
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { RestService } from './services/rest.service';
 import { SearchFilmService } from './services/search-film.service';
+import { FavoriteService } from './services/favorite.service';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { SearchFilmService } from './services/search-film.service';
   ],
   providers: [
     RestService,
-    SearchFilmService
+    SearchFilmService,
+    FavoriteService
   ],
   bootstrap: [AppComponent]
 })
