@@ -14,8 +14,11 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { FilmSearchComponent } from './components/film-search/film-search.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { FilmComponent } from './components/film/film.component';
+
 import { RestService } from './services/rest.service';
 import { SearchFilmService } from './services/search-film.service';
 import { FavoriteService } from './services/favorite.service';
@@ -25,7 +28,8 @@ import { FavoriteService } from './services/favorite.service';
   declarations: [
     AppComponent,
     FilmSearchComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    FilmComponent
   ],
   imports: [
     BrowserModule,

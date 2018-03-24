@@ -1,7 +1,7 @@
 export interface IFilmShort {
-    Poster: String;
+    Poster?: String;
     Title: String;
-    Type: String;
+    Type?: String;
     Year: Number;
     imdbID: String;
 }
