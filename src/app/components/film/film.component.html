@@ -1,3 +1,50 @@
-<p>
-  film works!
-</p>
+<mat-progress-spinner mode="indeterminate" diameter="100" *ngIf="!isLoading"></mat-progress-spinner>
+<main class="main">
+  <section class="film">
+    <mat-card class="film" *ngIf="film">
+      <div class="film__poster">
+        <img class="film__poster-img" *ngIf="film.Poster !== 'N/A'" [src]="film.Poster" />
+      </div>
+      <mat-card-content class="film__body">
+        <mat-card-title class="film__title" [routerLink]="film.imdbID">{{film.Title}}</mat-card-title>
+        <i (click)="addToFavorite(film)" [ngClass]="favoriteCheck(film) ? 'film__favorite--active': ''" class="film__favorite fas fa-star"></i>
+        <div class="film__field">
+          <div class="film__filed_key">Runtime: </div>
+          <div class="film__filed_value">{{film.Runtime}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Genre: </div>
+          <div class="film__filed_value">{{film.Genre}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Country: </div>
+          <div class="film__filed_value">{{film.Country}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Released: </div>
+          <div class="film__filed_value">{{film.Released}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Director: </div>
+          <div class="film__filed_value">{{film.Director}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Actors: </div>
+          <div class="film__filed_value">{{film.Actors}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Awards: </div>
+          <div class="film__filed_value">{{film.Awards}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Rated: </div>
+          <div class="film__filed_value">{{film.Rated}}</div>
+        </div>
+        <div class="film__field">
+          <div class="film__filed_key">Plot: </div>
+          <div class="film__filed_value">{{film.Plot}}</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </section>
+</main>

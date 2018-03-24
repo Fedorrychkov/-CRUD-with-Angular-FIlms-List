@@ -121,6 +121,12 @@ export class RestService {
             method: 'get'
         };
         break;
+      case Endpoint.GETBYID:
+        params = {
+          url: '',
+          method: 'get'
+        };
+        break;
       default:
         break;
     }

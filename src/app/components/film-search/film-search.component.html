@@ -16,9 +16,8 @@
         <img class="film__poster-img" *ngIf="film.Poster !== 'N/A'" [src]="film.Poster" />
       </div>
       <mat-card-content class="film__body">
-        <mat-card-title class="film__title">{{film.Title}}</mat-card-title>
+        <mat-card-title class="film__title" [routerLink]="film.imdbID">{{film.Title}}</mat-card-title>
         <i (click)="addToFavorite(film)" [ngClass]="favoriteCheck(film) ? 'film__favorite--active': ''" class="film__favorite fas fa-star"></i>
-        <!-- film__favorite--active -->
       </mat-card-content>
     </mat-card>
   </section>

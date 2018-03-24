@@ -33,10 +33,10 @@ export class FilmSearchComponent implements OnInit {
         } else {
           this.filmTitlesList = [];
           this.filmTitlesList.splice(
-              0,
-              this.filmTitlesList.length,
-              data.Error.search(/not found/i) !== -1 ? 'Фильмов не найдено' : 'Продолжайте набирать'
-            );
+            0,
+            this.filmTitlesList.length,
+            data.Error.search(/not found/i) !== -1 ? 'Фильмов не найдено' : 'Продолжайте набирать'
+          );
         }
       });
   }

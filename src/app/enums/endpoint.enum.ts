@@ -1,3 +1,4 @@
 export enum Endpoint {
-    SEARCH
+    SEARCH,
+    GETBYID
 }

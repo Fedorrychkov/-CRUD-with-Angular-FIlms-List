@@ -1,4 +1,4 @@
-export interface Film {
+export interface IFilm {
     Title: String;
     Year: Number;
     Rated?: String;

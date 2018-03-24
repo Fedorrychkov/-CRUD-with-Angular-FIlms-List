@@ -22,4 +22,17 @@ export class SearchFilmService {
             );
         });
     }
+
+    getFilmById(query: string): Promise<any> {
+        return new Promise( (res, rej) => {
+        this.restService.get(Endpoint.GETBYID, {apikey: environment.apikey, i: query})
+            .then(
+                (data) => {
+                    res(data);
+                }, (err) => {
+                    rej(err);
+                }
+            );
+        });
+    }
 }
