@@ -12,7 +12,7 @@
 <main class="main">
   <section class="films" *ngIf="filmsList">
     <mat-card class="film" *ngFor="let film of filmsList">
-      <div class="film__poster">
+      <div class="film__poster" [routerLink]="film.imdbID">
         <img class="film__poster-img" *ngIf="film.Poster !== 'N/A'" [src]="film.Poster" />
       </div>
       <mat-card-content class="film__body">
