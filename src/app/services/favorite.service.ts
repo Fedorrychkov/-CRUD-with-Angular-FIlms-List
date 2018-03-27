@@ -8,7 +8,7 @@ export class FavoriteService {
   constructor() { }
 
   addToFavorite(film: IFilmShort) {
-    const favoriteList: IFilmShort[] = localStorage.favorite ? JSON.parse(localStorage.favorite) : [];
+    const favoriteList: IFilmShort[] = this.getFromStorage();
     let list: IFilmShort[];
     list = favoriteList.filter(item => item.imdbID !== film.imdbID );
     if (!this.checkFavorite(film)) {
@@ -19,7 +19,7 @@ export class FavoriteService {
   }
 
   checkFavorite(film: IFilmShort) {
-    const favoriteList: IFilmShort[] = localStorage.favorite ? JSON.parse(localStorage.favorite) : [];
+    const favoriteList: IFilmShort[] = this.getFromStorage();
     let isFavorite = false;
     favoriteList.forEach(item => {
       if (item.imdbID === film.imdbID) {
@@ -27,5 +27,9 @@ export class FavoriteService {
       }
     });
     return isFavorite;
+  }
+
+  getFromStorage() {
+    return localStorage.favorite ? JSON.parse(localStorage.favorite) : [];
   }
 }

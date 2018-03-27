@@ -22,7 +22,7 @@ export class FavoritesComponent implements OnInit {
     return this.favoriteService.checkFavorite(film);
   }
   getFavorites() {
-    this.filmsList = localStorage.favorite ? JSON.parse(localStorage.favorite) : [];
+    this.filmsList = this.favoriteService.getFromStorage();
   }
   ngOnInit() {
     this.getFavorites();

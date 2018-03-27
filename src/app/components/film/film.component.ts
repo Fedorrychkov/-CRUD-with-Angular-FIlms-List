@@ -19,7 +19,9 @@ export class FilmComponent implements OnInit {
     public route: ActivatedRoute,
     public searchFilmService: SearchFilmService,
     public favoriteService: FavoriteService
-  ) {
+  ) {}
+  
+  getRouterParam() {
     this.route.params.subscribe(
       (params) => {
           this.id = params.id;
@@ -32,7 +34,6 @@ export class FilmComponent implements OnInit {
     this.searchFilmService.getFilmById(this.id)
       .then((data) => {
         this.film = data;
-        console.log(data);
       })
       .then(() => {
         this.isLoading = true;
@@ -47,6 +48,7 @@ export class FilmComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getRouterParam();
   }
 
 }
